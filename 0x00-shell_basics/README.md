@@ -11,3 +11,5 @@
  - 9-firstdirdeletion -- Delete directory
  - 10-back -- Move to previous directory
  - 11-lists -- List all content in cwd, parent dir, and /boot
+ - 12-file_type -- Show file type
+

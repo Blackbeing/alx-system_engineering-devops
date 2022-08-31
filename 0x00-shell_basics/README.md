@@ -12,4 +12,4 @@
  - 10-back -- Move to previous directory
  - 11-lists -- List all content in cwd, parent dir, and /boot
  - 12-file_type -- Show file type
-
+ - 13-symbolic_link -- Create symbolic link to /bin/ls

@@ -14,3 +14,4 @@
  - 12-file_type -- Show file type
  - 13-symbolic_link -- Create symbolic link to /bin/ls
  - 14-copy_html -- Copy all html files to parent directory
+ - 100-lets_move -- Move all beginning with uppercase letter

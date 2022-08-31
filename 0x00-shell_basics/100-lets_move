@@ -1,0 +1,2 @@
+#!/bin/bash
+find . -type f -maxdepth 1 -regextype egrep -regex '.*/[A-Z].*$' -exec mv -t /tmp/u '{}' +

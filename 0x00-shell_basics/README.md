@@ -9,3 +9,4 @@
  - 7-movethatfile -- Move file
  - 8-firstdelete -- Delete file
  - 9-firstdirdeletion -- Delete directory
+ - 10-back -- Move to previous directory

@@ -8,3 +8,4 @@
  - 6-firstdirectory -- Create directory in /tmp
  - 7-movethatfile -- Move file
  - 8-firstdelete -- Delete file
+ - 9-firstdirdeletion -- Delete directory

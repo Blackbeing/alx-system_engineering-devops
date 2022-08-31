@@ -17,4 +17,6 @@
  - 100-lets_move -- Move all beginning with uppercase letter
  - 101-clean_emacs -- Remove emacs files (ending with ~)
  - 102-tree -- Create multiple dir
+ - 103-commas -- Append dir listing with commas
+
 

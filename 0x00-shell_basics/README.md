@@ -7,3 +7,4 @@
  - 5-listfilesdigitonly -- List current directory contents in long format (UID and GID numerically)
  - 6-firstdirectory -- Create directory in /tmp
  - 7-movethatfile -- Move file
+ - 8-firstdelete -- Delete file

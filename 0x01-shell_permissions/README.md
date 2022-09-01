@@ -8,3 +8,4 @@
   - 6-multiple_permissions -- Add user,group and others permissions
   - 7-everybody -- Add execution permission to all users
   - 8-James_Bond -- Remove all permissions from owner and user; Add all permissions to other users
+  - 9-John_Doe -- change file permissions to -rwxr-x-wr

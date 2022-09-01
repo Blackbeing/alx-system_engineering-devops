@@ -12,3 +12,4 @@
   - 10-mirror_permissions -- Mirror file permissions
   - 11-directories_permissions -- Add execute permission to directories only
   - 12-directory_permissions -- Create dir with perm 751
+  - 13-change_group -- Change group owner of file

@@ -10,3 +10,4 @@
   - 8-James_Bond -- Remove all permissions from owner and user; Add all permissions to other users
   - 9-John_Doe -- change file permissions to -rwxr-x-wr
   - 10-mirror_permissions -- Mirror file permissions
+  - 11-directories_permissions -- Add execute permission to directories only

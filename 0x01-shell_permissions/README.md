@@ -6,3 +6,4 @@
   - 4-empty -- Create empty file
   - 5-execute -- Add execute permission to file
   - 6-multiple_permissions -- Add user,group and others permissions
+  - 7-everybody -- Add execution permission to all users

@@ -14,3 +14,4 @@
   - 12-directory_permissions -- Create dir with perm 751
   - 13-change_group -- Change group owner of file
   - 100-change_owner_and_group -- Change files and directories user and group owners
+  - 101-symbolic_link_permissions -- Change permission of files (symbolic link)

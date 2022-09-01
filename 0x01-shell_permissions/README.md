@@ -7,3 +7,4 @@
   - 5-execute -- Add execute permission to file
   - 6-multiple_permissions -- Add user,group and others permissions
   - 7-everybody -- Add execution permission to all users
+  - 8-James_Bond -- Remove all permissions from owner and user; Add all permissions to other users

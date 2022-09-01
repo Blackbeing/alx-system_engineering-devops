@@ -4,4 +4,4 @@
   - 2-groups -- Get user's groups
   - 3-new_owner -- Change file owner
   - 4-empty -- Create empty file
-
+  - 5-execute -- Add execute permission to file

@@ -5,3 +5,4 @@
   - 3-new_owner -- Change file owner
   - 4-empty -- Create empty file
   - 5-execute -- Add execute permission to file
+  - 6-multiple_permissions -- Add user,group and others permissions

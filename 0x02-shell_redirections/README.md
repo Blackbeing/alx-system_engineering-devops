@@ -19,3 +19,4 @@
  - 17-hidethisword -- Print non-matching words
  - 18-letteronly -- Print lines starting with a letter
  - 19-AZ -- Replace A to Z and c to e
+ - 20-hiago -- Delete letters C and c

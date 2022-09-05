@@ -9,3 +9,4 @@
  - 7-file -- Create file  "\*\\\'\"Best School\"'\\\*$\?\*\*\*\*\*:\)"
  - 8-cwd_state -- Write cwd listing content to a file
  - 9-duplicate_last_line -- Duplicate last line
+ - 10-no_more_js -- Remove js files

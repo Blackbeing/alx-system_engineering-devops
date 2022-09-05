@@ -14,3 +14,4 @@
  - 12-newest_files -- Sort files
  - 13-unique -- print unique words
  - 14-findthatword -- Find word in file
+ - 15-countthatword -- Count words in file

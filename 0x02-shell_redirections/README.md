@@ -13,3 +13,4 @@
  - 11-directories -- Count directories
  - 12-newest_files -- Sort files
  - 13-unique -- print unique words
+ - 14-findthatword -- Find word in file

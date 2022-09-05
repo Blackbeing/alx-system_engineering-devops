@@ -11,3 +11,4 @@
  - 9-duplicate_last_line -- Duplicate last line
  - 10-no_more_js -- Remove js files
  - 11-directories -- Count directories
+ - 12-newest_files -- Sort files

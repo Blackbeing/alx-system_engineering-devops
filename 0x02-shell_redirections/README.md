@@ -4,4 +4,5 @@
  - 2-hellofili -- Display contents of /etc/passwd file
  - 3-twofiles -- Display contents of /etc/passwd and /etc/hosts
  - 4-lastlines -- Display last 10 lines of file
+ - 5-firstlines -- Display first 10 lines of file
 

@@ -17,3 +17,4 @@
  - 15-countthatword -- Count words in file
  - 16-whatsnext -- Print lines after a match
  - 17-hidethisword -- Print non-matching words
+ - 18-letteronly -- Print lines starting with a letter

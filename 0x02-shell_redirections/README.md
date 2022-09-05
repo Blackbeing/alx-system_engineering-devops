@@ -5,4 +5,4 @@
  - 3-twofiles -- Display contents of /etc/passwd and /etc/hosts
  - 4-lastlines -- Display last 10 lines of file
  - 5-firstlines -- Display first 10 lines of file
-
+ - 6-third_line -- Print third line of a file

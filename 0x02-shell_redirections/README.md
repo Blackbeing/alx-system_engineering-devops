@@ -20,3 +20,4 @@
  - 18-letteronly -- Print lines starting with a letter
  - 19-AZ -- Replace A to Z and c to e
  - 20-hiago -- Delete letters C and c
+ - 21-reverse -- Reverse input

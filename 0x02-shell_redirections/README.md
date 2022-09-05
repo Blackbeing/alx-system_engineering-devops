@@ -23,3 +23,4 @@
  - 21-reverse -- Reverse input
  - 22-users_and_homes -- Find users and home directories, sort by user
  - 100-empty_casks -- Find empty files and directories
+ - 101-gifs -- Find gif files and sort

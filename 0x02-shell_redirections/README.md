@@ -15,3 +15,4 @@
  - 13-unique -- print unique words
  - 14-findthatword -- Find word in file
  - 15-countthatword -- Count words in file
+ - 16-whatsnext -- Print lines after a match

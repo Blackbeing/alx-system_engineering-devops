@@ -11,3 +11,4 @@
  - 9-divide_and_rule -- Do arithmetic computation
  - 10-love_exponent_breath -- Do arithmetic computation
  - 11-binary_to_decimal -- Convert binary to decimal
+ - 12-combinations -- Combinations

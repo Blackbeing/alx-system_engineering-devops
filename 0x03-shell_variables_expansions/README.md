@@ -5,4 +5,5 @@
  - 3-paths -- Find number of paths in PATH
  - 4-global_variables -- print global variables
  - 5-local_variables -- print local and global variables
- - 6-create_local_variable -- Create variable
+ - 6-create_local_variable -- Create local variable
+ - 7-create_global_variable -- Create global variable

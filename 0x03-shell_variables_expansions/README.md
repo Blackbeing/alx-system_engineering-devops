@@ -4,3 +4,4 @@
  - 2-path -- Extend path variable
  - 3-paths -- Find number of paths in PATH
  - 4-global_variables -- print global variables
+ - 5-local_variables -- print local and global variables

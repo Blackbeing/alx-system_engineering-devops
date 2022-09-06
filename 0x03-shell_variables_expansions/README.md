@@ -8,3 +8,4 @@
  - 6-create_local_variable -- Create local variable
  - 7-create_global_variable -- Create global variable
  - 8-true_knowledge -- Do arithmetic computation
+ - 9-divide_and_rule -- Do arithmetic computation

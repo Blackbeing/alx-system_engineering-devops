@@ -13,3 +13,4 @@
  - 11-binary_to_decimal -- Convert binary to decimal
  - 12-combinations -- Combinations
  - 13-print_float -- Print floats
+ - 100-decimal_to_hexadecimal -- Convert decimal to hexadecimal

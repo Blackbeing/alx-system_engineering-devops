@@ -14,3 +14,4 @@
  - 12-combinations -- Combinations
  - 13-print_float -- Print floats
  - 100-decimal_to_hexadecimal -- Convert decimal to hexadecimal
+ - 102-odd -- Print every other line from input

@@ -15,3 +15,4 @@
  - 13-print_float -- Print floats
  - 100-decimal_to_hexadecimal -- Convert decimal to hexadecimal
  - 102-odd -- Print every other line from input
+ - 101-rot13 -- Encode text with rot13

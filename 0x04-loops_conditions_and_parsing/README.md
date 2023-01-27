@@ -7,3 +7,4 @@
 - 6-superstitious_numbers -- Print supersitious numbers
 - 7-clock -- Displays the time for 12 hours and 59 minutes
 - 8-for_ls -- Print directory listing, part after first hyphen
+- 9-to_file_or_not_to_file -- Check file properties

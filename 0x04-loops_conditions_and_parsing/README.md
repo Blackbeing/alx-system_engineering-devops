@@ -9,3 +9,4 @@
 - 8-for_ls -- Print directory listing, part after first hyphen
 - 9-to_file_or_not_to_file -- Check file properties
 - 10-fizzbuzz -- FizzBuzz
+- 100-read_and_cut -- Read /etc/passwd file, parse username, user id, home directory

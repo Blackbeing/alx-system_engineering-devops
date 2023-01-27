@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+#Prints to infinity and beyond
+#Catches SIGTERM (15) and prints I am invincible!!!
+
+while true; do
+	trap 'echo "I am invincible!!!"' 15
+	echo 'To infinity and beyond'
+	sleep 2
+done
+

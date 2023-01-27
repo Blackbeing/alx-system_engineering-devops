@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#Display content of current directory
+#Part after first hyphen
+
+files="$(ls)"
+for i in $files; do
+	echo "$i" | cut -d '-' -f 2
+done

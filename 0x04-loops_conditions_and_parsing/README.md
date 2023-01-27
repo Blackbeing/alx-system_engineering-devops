@@ -6,3 +6,4 @@
 - 5-4_bad_luck_8_is_your_chance -- Prints best school, bad luck on 4th iter, good luck 8th iter.
 - 6-superstitious_numbers -- Print supersitious numbers
 - 7-clock -- Displays the time for 12 hours and 59 minutes
+- 8-for_ls -- Print directory listing, part after first hyphen

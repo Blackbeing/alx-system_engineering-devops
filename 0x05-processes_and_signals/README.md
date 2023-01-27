@@ -7,3 +7,4 @@
 - 5-dont_stop_me_now -- Kill running script
 - 6-stop_me_if_you_can -- stop 4-to_infinity_and_beyond script
 - 7-highlander -- use trap command to catch signals
+- 8-beheaded_process -- Kill process SIGKILL

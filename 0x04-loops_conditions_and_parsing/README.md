@@ -3,3 +3,4 @@
 - 2-while_best_school -- Print best school 10 times using while loop
 - 3-until_best_school -- Print best school 10 times using until loop
 - 4-if_9_say_hi -- Prints best school, prints Hi on 9th iteration
+- 5-4_bad_luck_8_is_your_chance -- Prints best school, bad luck on 4th iter, good luck 8th iter.

@@ -4,3 +4,4 @@
 - 2-MAC_and_IP_address -- Quiz answers
 - 3-UDP_and_TCP -- Quiz answers
 - 4-TCP_and_UDP_ports -- Display listening ports
+- 5-is_the_host_on_the_network -- Script to ping address

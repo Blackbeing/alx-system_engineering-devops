@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# Install apache2 if not installed
+apt install apache2
+
+# check apache root directory
+grep DocumentRoot /etc/apache2/sites-available/000-default.conf
+
+# check content of index.hmtl at document root
+cat "$(grep DocumentRoot /etc/apache2/sites-available/000-default.conf | cut -d " " -f 2)/index.html"
+
+# expect "Hello Holberton"
+
+# check if apache is running
+netstat -lpn | grep apache2
+
+# Start apache2 server
+service apache2 start

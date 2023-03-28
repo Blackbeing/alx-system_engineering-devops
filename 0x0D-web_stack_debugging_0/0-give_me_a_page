@@ -6,7 +6,7 @@ apt install apache2
 grep DocumentRoot /etc/apache2/sites-available/000-default.conf
 
 # check content of index.hmtl at document root
-cat "$(grep DocumentRoot /etc/apache2/sites-available/000-default.conf | cut -d " " -f 2)/index.html"
+echo "$(grep DocumentRoot /etc/apache2/sites-available/000-default.conf | cut -d " " -f 2)/index.html"
 
 # expect "Hello Holberton"
 

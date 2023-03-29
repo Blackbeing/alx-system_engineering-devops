@@ -34,8 +34,11 @@ sed -i "s|${base_location}|${base_location}\n\n\t${redirect_location}|" /etc/ngi
 
 # Reload nginx, (reload config without stopping)
 
-if [[ $(nginx -tq) -eq 0 ]]; then 
+# if [[ $(nginx -tq) -eq 0 ]]; then 
 	# Start nginx server
-	service nginx restart
-fi
+	# service nginx restart
+# fi
+
+# Always restart nginx
+service nginx restart
 

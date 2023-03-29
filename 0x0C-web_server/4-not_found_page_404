@@ -42,8 +42,11 @@ echo "Ceci n'est pas une page" > "$doc_root/404.html"
 
 # Reload nginx, (reload config without stopping)
 
-if [[ $(nginx -tq) -eq 0 ]]; then 
+# if [[ $(nginx -tq) -eq 0 ]]; then 
 	# Start nginx server
-	service nginx restart
-fi
+	# service nginx restart
+# fi
+
+# Always restart nginx
+service nginx restart
 

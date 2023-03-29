@@ -4,3 +4,4 @@
 - 2-setup_a_domain_name -- Domain name
 - 3-redirection -- Add redirection to nginx server
 - 4-not_found_page_404 -- Redirect unavailable pages to 404 page
+- 7-puppet_install_nginx_web_server.pp -- Setup nginx using puppet

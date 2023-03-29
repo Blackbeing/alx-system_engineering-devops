@@ -15,6 +15,9 @@ apt install nginx -y
 # Get document root directory of server
 doc_root="$(grep -v '^#' /etc/nginx/sites-available/default | grep -w 'root' -m 1 | cut -d' ' -f2 | sed 's/;//')"
 
+# create doc_root if not exists
+mkdir -p "$doc_root"
+
 # create index.html
 echo "Hello World!" > "$doc_root/index.html"
 

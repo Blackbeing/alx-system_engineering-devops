@@ -5,9 +5,10 @@
 apt-get update -y
 
 # Install HAproxy
-apt-get -y install --no-install-recommends software-properties-common \
-	&& add-apt-repository -y ppa:vbernat/haproxy-2.7 \
-	&& apt-get -y install haproxy=2.7.\*
+# apt-get -y install --no-install-recommends software-properties-common \
+# 	&& add-apt-repository -y ppa:vbernat/haproxy-2.0 \
+# 	&& apt-get -y install haproxy=2.0.\*
+apt install haproxy -y
 
 # Enable HAProxy init script
 sed -i '$ a\ENABLED=1' /etc/default/haproxy
@@ -19,8 +20,6 @@ cp /etc/haproxy/{haproxy.cfg,haproxy.cfg.orig}
 sed -i '$ r /dev/stdin' /etc/haproxy/haproxy.cfg <<EOF
 
 frontend alxfrontend
-	# Set proxy mode to http (layer 7)
-	mode http
 
 	# Receive HTTP traffic on all IP addresses assigned to port 80
 	bind *:80
@@ -29,14 +28,13 @@ frontend alxfrontend
 	default_backend alxservers
 
 backend alxservers
-	mode http
 
 	# Define load balancing algorithm
 	balance roundrobin
 
 	# check specifies health checks should be performed
-	server s1 54.85.182.135:80 check
-	server s2 100.25.165.99:80 check
+	server web-01 54.85.182.135:80 check
+	server web-02 100.25.165.99:80 check
 EOF
 
 # start haproxy if running

@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+# Script to get info from webservers
+
+domain=$1
+subdomain=$2
+
+if [[ -z "$domain" ]]; then
+	exit
+fi
+
+# The subdomain [SUB_DOMAIN] is a [RECORD_TYPE] record and points to [DESTINATION]
+# The subdomain lb-01 is a A record and points to 54.210.47.110
+
+parse_domain () {
+	fqdn="$(echo "$1" | awk -F' ' '{print $1}')"
+	subdomain="$(echo "$fqdn" | cut -d'.' -f1)"
+	record="$(echo "$1" | awk -F' ' '{print $4}')"
+	ip="$(echo "$1" | awk -F' ' '{print $5}')"
+	echo "The subdomain $subdomain is a $record record and points to $ip"
+
+}
+
+if [[ -n "$subdomain" ]]; then
+	info="$(dig "$subdomain.$domain" | grep -A1 'ANSWER SECTION:' | tail -n 1)"
+	parse_domain "$info"
+else
+	subdomains_list=("www" "lb-01" "web-01" "web-02")
+	for sub in "${subdomains_list[@]}"; do
+		info="$(dig "$sub.$1" | grep -A1 'ANSWER SECTION:' | tail -n 1)"
+		parse_domain "$info"
+	done
+fi

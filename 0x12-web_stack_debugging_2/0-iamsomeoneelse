@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+user="$1"
+if [[ -n $user ]]; then
+	su -l -s "$(which bash)" "$user" -c whoami
+fi

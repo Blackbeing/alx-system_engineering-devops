@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Run nginx as nginx user on port 8080
 pkill apache
-sed -i 's/\([^0-9]*\)\([0-9]\{1,\}\)\( default_server\)/\18080\3/g' /etc/nginx/sites-enabled/default
+sed -i 's/\([^0-9]*\)\([0-9]\{1,\}\)\( default_server\)/\18080\3/g' /etc/nginx/sites-available/default
 
 # change file ownership to nginx user
 chown nginx:nginx /etc/nginx/nginx.conf

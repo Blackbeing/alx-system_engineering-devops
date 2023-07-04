@@ -1,0 +1,41 @@
+#!/usr/bin/env bash
+# Install and configure HAProxy to send traffic to web-01 and web-02
+# using roundrobin algorithm
+
+# Update repos
+apt update
+
+# install HAProxy
+apt-get -y install --no-install-recommends software-properties-common \
+	&& add-apt-repository -y ppa:vbernat/haproxy-2.0 \
+	&& apt-get -y install haproxy=2.0.\*
+
+# Enable HAProxy init script
+cat <<EOF > /etc/default/haproxy
+ENABLED=1
+EOF
+
+# backup original configuration
+cp /etc/haproxy/{haproxy.cfg,haproxy.cfg.orig}
+
+cat <<EOF > /etc/haproxy/haproxy.cfg
+frontend blackbeing-frontend
+
+	# Receive HTTP traffic on all IP
+	bind *:80
+
+	# Default backend servers
+	default_backend blackbeing-servers
+
+backend blackbeing-servers
+
+	# balancing algorithm
+	balance roundrobin
+
+	# Check server health
+	server web-01 54.160.93.22:80 check
+	server web-02 18.234.169.109:80 check
+EOF
+
+# Restart HAProxy
+service haproxy restart

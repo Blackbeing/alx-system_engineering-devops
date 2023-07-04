@@ -1,0 +1,51 @@
+#!/usr/bin/env bash
+# Add custom header to nginx server
+
+# Update repos
+apt update
+
+# Install nginx without prompt
+apt install nginx -y
+
+# document root, create if doesn't exist
+doc_root="/var/www/html"
+mkdir -p "$doc_root"
+
+# create index.html
+echo "Hello World!" > "$doc_root/index.html"
+
+# create error page 404.html
+echo "Ceci n'est pas une page" > "$doc_root/404.html"
+
+# Allow Nginx HTTP in firewall
+ufw allow 'Nginx HTTP'
+
+cat <<EOF > /etc/nginx/sites-available/default
+server {
+	listen 80 default_server;
+	listen [::]:80 default_server;
+
+	root /var/www/html;
+
+	index index.html index.htm index.nginx-debian.html;
+
+	server_name _;
+
+	add_header X-Served-By $(hostname);
+
+	error_page 404 /404.html;
+	location = /404.html {
+		internal;
+	}
+
+	location /redirect_me {
+		return 301 https://google.com;
+	}
+
+	location / {
+		try_files \$uri \$uri/ =404;
+	}
+}
+EOF
+
+service nginx restart

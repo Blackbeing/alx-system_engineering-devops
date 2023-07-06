@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# Run nginx on port 80 as default
+# Problem: nginx set to run in port 8080 on /etc/nginx/sites-enabled/default
+# Problem: nginx socket file has been removed, cannot do nginx -s reload
+
+# Forcefull kill nginx
+pkill -TERM nginx
+
+# /\([^0-9]*\)        -> capture all non-numerical
+# \([0-9]\{1,\}\)     -> capture all numericals in range 1 to inf
+# \( default_server\) -> capture default server string
+# /\1                 -> back reference 1st capture group
+# 80                  -> put string 80 (replaces 2nd capture group, (port))
+# \3                  -> back reference 3rd capture group
+# /g                  -> on all lines
+
+sed -i 's/\([^0-9]*\)\([0-9]\{1,\}\)\( default_server\)/\180\3/g' /etc/nginx/sites-enabled/default
+
+# Restart nginx
+/etc/init.d/nginx start

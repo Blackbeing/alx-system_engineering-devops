@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+# World web script to check domain
+# 0-world_wide_web domain subdomain
+# domain is required, otherwise exists
+
+function parse_answer_section() {
+	read -r domain_name record_type ip <<< "$(echo "$1" | awk '{print $1, $4, $5}')"
+	read -r sub_domain <<< "$(echo "$domain_name"| awk -F '.' '{print $1}')"
+	echo "The subdomain $sub_domain is a $record_type record and points to $ip"
+}
+function main() {
+	if [[ -z $2 ]]; then
+		sub_domains=("www" "lb-01" "web-01" "web-02")
+		for sub_domain in "${sub_domains[@]}"; do
+			parse_answer_section  "$(dig "$sub_domain.$1" | grep -A1 'ANSWER SECTION:' | tail -n 1)"
+		done
+	else
+		parse_answer_section  "$(dig "$2.$1" | grep -A1 'ANSWER SECTION:' | tail -n 1)"
+
+	fi
+}
+
+if [[ -z "$1" ]]; then
+	exit 1
+fi
+
+main "$1" "$2"

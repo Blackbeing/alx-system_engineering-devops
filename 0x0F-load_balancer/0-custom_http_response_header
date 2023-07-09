@@ -47,5 +47,8 @@ server {
 	}
 }
 EOF
-
+# restart nginx if not running
 service nginx restart
+
+# reload configuration
+nginx -s reload

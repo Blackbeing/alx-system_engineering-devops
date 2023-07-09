@@ -17,7 +17,7 @@ ENABLED=1
 EOF
 
 # backup original configuration
-cp /etc/haproxy/{haproxy.cfg,haproxy.cfg.orig}
+# cp -f /etc/haproxy/{haproxy.cfg,haproxy.cfg.orig}
 
 cat <<EOF > /etc/haproxy/haproxy.cfg
 frontend blackbeing-frontend
@@ -34,8 +34,8 @@ backend blackbeing-servers
 	balance roundrobin
 
 	# Check server health
-	server web-01 54.160.93.22:80 check
-	server web-02 18.234.169.109:80 check
+	server 132522-web-01 54.160.93.22:80 check
+	server 132522-web-02 18.234.169.109:80 check
 EOF
 
 # Restart HAProxy

@@ -1,0 +1,25 @@
+global
+	# Set Deffile-Helman module to 2048
+	tune.ssl.default-dh-param 2048
+
+frontend blackbeing-frontend
+	mode http
+
+	# Receive HTTP traffic on all IP
+	bind :80
+	
+	# Bind https traffic
+	bind :443 ssl crt /etc/haproxy/certs/www.blackbeingalx.tech.pem
+
+	# Default backend servers
+	default_backend blackbeing-servers
+
+backend blackbeing-servers
+	mode http
+
+	# balancing algorithm
+	balance roundrobin
+
+	# Check server health
+	server 132522-web-01 54.160.93.22:80 check
+	server 132522-web-02 18.234.169.109:80 check

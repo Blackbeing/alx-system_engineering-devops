@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+# Deny all incoming traffic except ssh, https and http
+
+# install ufw
+apt install ufw
+
+# enable ufw
+ufw enable
+
+# Deny all incoming traffic
+ufw default deny incoming
+
+# Allow all outgoing traffic
+ufw default allow outgoing
+
+# Allow ssh
+ufw allow ssh
+
+# Allow https
+ufw allow https
+
+# Allow http
+ufw allow http

@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# Create backup of mysql databases
+
+# Ensure password is provided
+if [[ -z $1 ]]; then
+    echo "Usage: 5-mysql_backup PASSWORD"
+    exit 1
+fi
+
+# current date
+today=$(date +"%d-%m-%Y")
+
+# archive name
+archive_file="$today.tar.gz"
+
+# create mysql dump
+mysqldump -uroot -p"$1" --all-databases > "backup.sql"
+
+# Compress dump file
+tar -czf "$archive_file" "backup.sql"

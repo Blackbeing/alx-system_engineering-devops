@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#Script to run software as someone else
+
+if [[ -n "$1" ]]; then
+       shell="$(command -v bash)"
+       su -l -s "${shell}" -c whoami "$1"
+fi

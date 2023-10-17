@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# Run nginx as nginx user
+
+# Kill apache services
+pkill apache2
+
+# Ensure nginx is running on port 8080
+sed -i 's/\([^0-9]*\)\([0-9]\{1,\}\)\( default_server\)/\18080\3/g' /etc/nginx/sites-available/default
+
+# change ownership of nginx config file
+chown nginx:nginx /etc/nginx/nginx.conf
+
+# Restrict permissions, u-rw, go-r
+chmod 0644 /etc/nginx/nginx.conf
+
+# run nginx as nginx user
+shell="$(command -v bash)"
+su -l -s "${shell}" -c 'service nginx restart' 'nginx'

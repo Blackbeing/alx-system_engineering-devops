@@ -2,8 +2,9 @@
 
 """This module queries reddit API using python"""
 
-import requests
 import json
+
+import requests
 
 
 def top_ten(subreddit):

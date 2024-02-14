@@ -2,9 +2,9 @@
 
 """This module queries reddit API using python"""
 
-import requests
 import json
 
+import requests
 
 base_url = "https://www.reddit.com"
 headers = {"User-Agent": "ALXAPIAdv/0.1"}
